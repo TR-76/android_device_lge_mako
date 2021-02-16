@@ -12,6 +12,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, device/lge/mako/device.mk)
 
+# TR // MG-APKS
+$(call inherit-product-if-exists, vendor/mg-apks/config.mk)
+TARGET_EXCLUDES_AUDIOFX := true
+TARGET_EXCLUDES_PREBUILT_ETAR_CALENDAR := true
+TARGET_EXCLUDES_PREBUILT_SIMPLE_KEYBOARD := true
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := mako
 PRODUCT_NAME := lineage_mako
