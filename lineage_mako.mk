@@ -14,6 +14,9 @@ $(call inherit-product, device/lge/mako/device.mk)
 
 TARGET_EXCLUDES_AUDIOFX := true
 
+# Lawnchair Launcher
+$(call inherit-product-if-exists, vendor/lawnchair/lawnchair.mk)
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := mako
 PRODUCT_NAME := lineage_mako
