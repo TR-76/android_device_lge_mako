@@ -306,5 +306,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
     $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf
 
+# Remove Packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
 # Dalvik
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)

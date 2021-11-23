@@ -12,6 +12,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, device/lge/mako/device.mk)
 
+TARGET_EXCLUDES_AUDIOFX := true
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := mako
 PRODUCT_NAME := lineage_mako
