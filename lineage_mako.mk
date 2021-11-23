@@ -20,6 +20,8 @@ $(call inherit-product, vendor/lge/mako/mako-vendor.mk)
 # Common Android Go configurations
 $(call inherit-product, build/target/product/go_defaults.mk)
 
+TARGET_EXCLUDES_AUDIOFX := true
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := mako
 PRODUCT_NAME := lineage_mako
