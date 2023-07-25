@@ -19,6 +19,9 @@ $(call inherit-product, vendor/lge/mako/mako-vendor.mk)
 # Dalvik (2 GB configuration)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
+# Mulch Webview
+$(call inherit-product-if-exists, vendor/mulch/mulch.mk)
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := mako
 PRODUCT_NAME := lineage_mako
